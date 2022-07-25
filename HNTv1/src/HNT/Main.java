@@ -1,6 +1,6 @@
 package HNT;
 public class Main {
-	static final int high = 20;
+	static final int high = 5;
 	static Circle towr[][] = new Circle[3][high];
 	static int moveCount = 0;
 	public static void main(String args[]) {
@@ -11,7 +11,7 @@ public class Main {
 			towr[0][m] = new Circle(high-m); 
 		}
 		
-		System.out.println("原本的陣列");
+		System.out.println("Origin");
 		for(int m=high-1;m>=0;m--) {
 			for(int n=0;n<3;n++) {
 				if(towr[n][m]==null) {
@@ -24,7 +24,7 @@ public class Main {
 		}
 		
 		moveTo(0,high-1,1); //
-		System.out.println("第" + moveCount + "次的陣列");
+		System.out.println("Moved" + moveCount + "times");
 		for(int m=high-1;m>=0;m--) {
 			for(int n=0;n<3;n++) {
 				if(towr[n][m]==null) {
@@ -68,7 +68,7 @@ public class Main {
 			if(haveMore==false) {
 				moveTo(temX,temY,aim(temX,temY));
 			}
-			System.out.println("第" + moveCount + "次的陣列");
+			System.out.println("Moved" + moveCount + "times");
 			for(int m=high-1;m>=0;m--) {
 				for(int n=0;n<3;n++) {
 					if(towr[n][m]==null) {
